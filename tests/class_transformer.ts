@@ -40,8 +40,7 @@ let albumJson = `
 class Album {
   id!: number;
   name!: string;
-  @Type(() => Photo)
-  photos!: Array<Photo>;
+  @Type(() => Photo) photos!: Array<Photo>;
 }
 
 let album = plainToClass(Album, JSON.parse(albumJson));
