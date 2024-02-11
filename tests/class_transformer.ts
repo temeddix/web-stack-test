@@ -25,7 +25,7 @@ let albumJson = `
   "photos": [
     {
       "id": 9,
-      "filename": "cool_wale.jpg",
+      "filename": "cool_whale.jpg",
       "depth": 1245
     },
     {
