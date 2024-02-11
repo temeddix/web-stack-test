@@ -33,14 +33,26 @@ let albumJson = `
       "filename": "hot_bird.jpg",
       "depth": 6123
     }
-  ]
+  ],
+  "pages": {
+    "table": 6,
+    "contents": 72
+  }
 }
 `;
+
+class Pages {
+  table!: number;
+  contents!: number;
+}
 
 class Album {
   id!: number;
   name!: string;
-  @Type(() => Photo) photos!: Array<Photo>;
+  @Type(() => Photo)
+  photos!: Array<Photo>;
+  @Type(() => Pages)
+  pages!: Pages;
 }
 
 let album = plainToClass(Album, JSON.parse(albumJson));
