@@ -1,4 +1,4 @@
-import { Type, plainToClass } from "class-transformer";
+import { nested, plainToInstance } from "class-transform";
 import "reflect-metadata";
 
 let photoJson = `
@@ -15,7 +15,7 @@ class Photo {
   depth!: number;
 }
 
-let photo = plainToClass(Photo, JSON.parse(photoJson));
+let photo = plainToInstance(Photo, JSON.parse(photoJson));
 console.log(photo);
 
 let albumJson = `
@@ -49,11 +49,9 @@ class Pages {
 class Album {
   id!: number;
   name!: string;
-  @Type(() => Photo)
-  photos!: Array<Photo>;
-  @Type(() => Pages)
-  pages!: Pages;
+  @nested(Photo) photos!: Array<Photo>;
+  @nested(Pages) pages!: Pages;
 }
 
-let album = plainToClass(Album, JSON.parse(albumJson));
+let album = plainToInstance(Album, JSON.parse(albumJson));
 console.log(album);
