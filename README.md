@@ -5,5 +5,5 @@ npm install --global tsx
 ```
 
 ```bash
-tsx [filepath]
+tsx tests/class_transform.ts
 ```
