@@ -54,5 +54,3 @@ class Album {
 
 let album = plainToInstance(Album, JSON.parse(albumJson));
 console.log(album);
-
-console.log(new Album());
