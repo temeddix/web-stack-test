@@ -1,5 +1,4 @@
 import { nested, plainToInstance } from "class-transform";
-import "reflect-metadata";
 
 let photoJson = `
 {
