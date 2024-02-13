@@ -1,4 +1,4 @@
-import { nested, plainToInstance } from "class-transform";
+import { nest, plainToInstance } from "class-transform";
 
 let photoJson = `
 {
@@ -48,8 +48,8 @@ class Pages {
 class Album {
   id?: number;
   name?: string;
-  @nested(Photo) photos?: Array<Photo>;
-  @nested(Pages) pages?: Pages;
+  @nest(Photo) photos?: Array<Photo>;
+  @nest(Pages) pages?: Pages;
 }
 
 let album = plainToInstance(Album, JSON.parse(albumJson));
