@@ -10,9 +10,9 @@ let photoJson = `
 `;
 
 class Photo {
-  id!: number;
-  filename!: string;
-  depth!: number;
+  id?: number;
+  filename?: string;
+  depth?: number;
 }
 
 let photo = plainToInstance(Photo, JSON.parse(photoJson));
@@ -42,16 +42,18 @@ let albumJson = `
 `;
 
 class Pages {
-  table!: number;
-  contents!: number;
+  table?: number;
+  contents?: number;
 }
 
 class Album {
-  id!: number;
-  name!: string;
-  @nested(Photo) photos!: Array<Photo>;
-  @nested(Pages) pages!: Pages;
+  id?: number;
+  name?: string;
+  @nested(Photo) photos?: Array<Photo>;
+  @nested(Pages) pages?: Pages;
 }
 
 let album = plainToInstance(Album, JSON.parse(albumJson));
 console.log(album);
+
+console.log(new Album());
