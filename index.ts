@@ -1,4 +1,4 @@
-import { nest, plainToInstance } from "class-transform";
+import { Exposed, plainToInstance } from "class-transform";
 
 let photoJson = `
 {
@@ -9,9 +9,9 @@ let photoJson = `
 `;
 
 class Photo {
-  id?: number;
-  filename?: string;
-  depth?: number;
+  id = Exposed.number();
+  filename = Exposed.string();
+  depth = Exposed.number();
 }
 
 let photo = plainToInstance(Photo, JSON.parse(photoJson));
@@ -41,15 +41,15 @@ let albumJson = `
 `;
 
 class Pages {
-  table?: number;
-  contents?: number;
+  table = Exposed.number();
+  contents = Exposed.number();
 }
 
 class Album {
-  id?: number;
-  name?: string;
-  @nest(Photo) photos?: Array<Photo>;
-  @nest(Pages) pages?: Pages;
+  id = Exposed.number();
+  name = Exposed.string();
+  photos = Exposed.structs(Photo);
+  pages = Exposed.struct(Pages);
 }
 
 let album = plainToInstance(Album, JSON.parse(albumJson));
