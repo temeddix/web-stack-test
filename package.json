@@ -4,7 +4,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "class-transform": "^0.7.0-dev.11",
-    "reflect-metadata": "^0.2.1"
+    "class-transform": "^0.7.0-dev.11"
   }
 }
