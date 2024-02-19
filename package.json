@@ -4,6 +4,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "class-transform": "^0.7.0-dev.11"
+    "class-transform": "^0.7.0-dev.11",
+    "dataclass": "^2.1.1"
   }
 }
