@@ -23,5 +23,23 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    "no-restricted-syntax": [
+      "error",
+      {
+        selector: "TSInterfaceDeclaration",
+        message: "For object-oriented code, use classes instead of interfaces.",
+      },
+      {
+        selector: "TSEnumDeclaration",
+        message: "For object-oriented code, use classes instead of enums.",
+      },
+    ],
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        default: "generic",
+      },
+    ],
+  },
 };

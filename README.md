@@ -1,9 +1,15 @@
 # web-stack-test
 
 ```bash
-npm install --global tsx
+npm install
 ```
 
 ```bash
-tsx tests/class_transform.ts
+npx tsx [filepath]
+```
+
+```bash
+npx eslint .
+npx tsc
+npx prettier . --write
 ```
