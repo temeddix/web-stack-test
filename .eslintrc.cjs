@@ -32,19 +32,19 @@ module.exports = {
       {
         selector: "TSInterfaceDeclaration",
         message:
-          "To write code that's coherent with JavaScript," +
+          "To write code that's aligned with JavaScript," +
           " use classes instead of interfaces.",
       },
       {
         selector: "TSEnumDeclaration",
         message:
-          "To write code that's coherent with JavaScript," +
+          "To write code that's aligned with JavaScript," +
           " use classes instead of enums.",
       },
       {
         selector: "TSTypeAliasDeclaration",
         message:
-          "To write code that's coherent with JavaScript," +
+          "To write code that's aligned with JavaScript," +
           " do not use type aliases.",
       },
     ],
