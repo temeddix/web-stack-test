@@ -1,11 +1,11 @@
 import { Exposed, plainToInstance, plainsToInstances } from "class-transform";
 
-let photoPlain = {
+const photoPlain = {
   id: 11,
   filename: "dirty_dog.jpg",
   depth: 2261,
 };
-let photoJson = JSON.stringify(photoPlain);
+const photoJson = JSON.stringify(photoPlain);
 
 class Photo {
   id = Exposed.number();
@@ -13,10 +13,10 @@ class Photo {
   depth = Exposed.number();
 }
 
-let photo = plainToInstance(Photo, JSON.parse(photoJson));
+const photo = plainToInstance(Photo, JSON.parse(photoJson));
 console.log(photo);
 
-let albumsPlain = [
+const albumsPlain = [
   {
     id: 1,
     name: "foo",
@@ -83,7 +83,7 @@ let albumsPlain = [
     },
   },
 ];
-let albumsJson = JSON.stringify(albumsPlain);
+const albumsJson = JSON.stringify(albumsPlain);
 
 class Pages {
   table = Exposed.number();
@@ -97,5 +97,5 @@ class Album {
   pages = Exposed.struct(Pages);
 }
 
-let albums = plainsToInstances(Album, JSON.parse(albumsJson));
+const albums = plainsToInstances(Album, JSON.parse(albumsJson));
 console.log(albums);

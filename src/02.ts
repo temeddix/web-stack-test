@@ -13,12 +13,13 @@ class User extends Data {
 }
 
 // 2. instantiate classes while type systems ensure correctness
-let user = User.create({ name: "Liza", age: 23, inner: Inner.create() });
+const user = User.create({ name: "Liza", age: 23, inner: Inner.create() });
 console.log(user);
 // > User { name: "Liza", age: 23 }
 
 // 3. make changes while benefiting from immutable values
-let updated = user.copy({ name: "Ann" });
+let updated;
+updated = user.copy({ name: "Ann" });
 // > User { name: "Ann", age: 23 }
 updated = updated.copy({ name: "Liza" });
 // > User { name: "Liza", age: 23 }
