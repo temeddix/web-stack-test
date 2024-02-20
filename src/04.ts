@@ -14,13 +14,13 @@ interface Dada {
 namespace MyNamespace {}
 
 // Warning expected.
-type ComplexType = { a: boolean; b: boolean };
+type ShapeType = { a: boolean; b: boolean };
 
-type SimpleType = string;
+type AliasType = Array<string>;
 
 class Mama {
   constructor(
-    public a: SimpleType,
+    public a: AliasType,
     public b: string,
   ) {}
   sayHi() {
@@ -28,7 +28,7 @@ class Mama {
   }
 }
 
-const haha: Mama | null = new Mama("Love", "Daughter");
+const haha: Mama | undefined = new Mama(["Love"], "Daughter");
 haha.sayHi();
 
 const a: string | null = "World";
@@ -36,3 +36,9 @@ console.log(a);
 
 const array: Array<number> = [1, 2, 3];
 console.log(array);
+
+function giveVoidLike() {
+  console.log("Something like void");
+}
+const voidLike = giveVoidLike();
+console.log(voidLike);
