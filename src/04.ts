@@ -16,6 +16,7 @@ namespace MyNamespace {}
 // Warning expected.
 type ShapeType = { a: boolean; b: boolean };
 
+// Warning expected.
 type AliasType = Array<string>;
 
 class Mama {

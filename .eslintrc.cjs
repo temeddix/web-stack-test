@@ -19,27 +19,41 @@ module.exports = {
       },
     },
   ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  root: true,
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
   },
   rules: {
     "no-restricted-syntax": [
-      "error",
+      "warn",
       {
         selector: "TSInterfaceDeclaration",
-        message: "For object-oriented code, use classes instead of interfaces.",
+        message:
+          "To write code that's coherent with JavaScript," +
+          " use classes instead of interfaces.",
       },
       {
         selector: "TSEnumDeclaration",
-        message: "For object-oriented code, use classes instead of enums.",
+        message:
+          "To write code that's coherent with JavaScript," +
+          " use classes instead of enums.",
+      },
+      {
+        selector: "TSTypeAliasDeclaration",
+        message:
+          "To write code that's coherent with JavaScript," +
+          " do not use type aliases.",
       },
     ],
     "@typescript-eslint/array-type": [
-      "error",
+      "warn",
       {
         default: "generic",
       },
     ],
+    "@typescript-eslint/no-namespace": "warn",
   },
 };
