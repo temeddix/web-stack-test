@@ -11,13 +11,17 @@ interface Dada {
 }
 
 // Warning expected.
-namespace MyNamespace {}
-
-// Warning expected.
 type ShapeType = { a: boolean; b: boolean };
 
 // Warning expected.
 type AliasType = Array<string>;
+
+// Warning expected.
+const array: number[] = [1, 2, 3];
+console.log(array);
+
+// Warning expected.
+namespace MyNamespace {}
 
 class Mama {
   constructor(
@@ -34,9 +38,6 @@ haha.sayHi();
 
 const a: string | null = "World";
 console.log(a);
-
-const array: Array<number> = [1, 2, 3];
-console.log(array);
 
 function giveVoidLike() {
   console.log("Something like void");
