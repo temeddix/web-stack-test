@@ -32,19 +32,22 @@ module.exports = {
       {
         selector: "TSInterfaceDeclaration",
         message:
-          "To write code that's aligned with JavaScript," +
+          "To write TypeScript code that's aligned with JavaScript," +
+          " which declares only things that actually exist at runtime," +
           " use classes instead of interfaces.",
       },
       {
         selector: "TSEnumDeclaration",
         message:
-          "To write code that's aligned with JavaScript," +
+          "To write TypeScript code that's aligned with JavaScript," +
+          " which declares only things that actually exist at runtime," +
           " use classes instead of enums.",
       },
       {
         selector: "TSTypeAliasDeclaration",
         message:
-          "To write code that's aligned with JavaScript," +
+          "To write TypeScript code that's aligned with JavaScript," +
+          " which declares only things that actually exist at runtime," +
           " do not use type aliases.",
       },
     ],
