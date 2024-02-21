@@ -29,7 +29,7 @@ class Mama {
     public b: string,
   ) {}
   sayHi() {
-    console.log("Hi!");
+    console.log(`Hi! ${this.a}`);
   }
 }
 
