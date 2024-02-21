@@ -44,3 +44,13 @@ function giveVoidLike() {
 }
 const voidLike = giveVoidLike();
 console.log(voidLike);
+
+abstract class MyAbstract {
+  abstract a: number;
+  abstract b: string;
+}
+class MyReal extends MyAbstract {
+  a = 4;
+  b = "Hmm";
+}
+console.log(new MyReal());
