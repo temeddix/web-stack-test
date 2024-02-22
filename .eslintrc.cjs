@@ -9,6 +9,6 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/stylistic",
-    "eslint-config-classic-typescript",
+    "eslint-config-clean-typescript",
   ],
 };
